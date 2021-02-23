@@ -1,0 +1,118 @@
+.login-container{
+    width: 350px;
+    margin: auto;    
+}
+.login-container >div:first-child,.login-container>p{
+    background-color: #FFFFFF;
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 2px;
+}
+.login{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login > .logo{
+    margin-top: 10px;
+}
+.login > .log-with-fb{
+    cursor: pointer;
+    font: 14px;
+    font-weight: bold;
+    color: #385185;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+.login > .log-with-fb i{
+    margin-right: 4px;
+}
+.login form , .login > .or{
+    width: 80%;
+}
+.login form{
+    display: flex;
+    flex-direction: column;
+}
+.login form input{
+    font-family: inherit;
+    padding: 9px 0 7px 8px;
+    border-radius: 2px;
+    background-color: #FAFAFA;
+    border: 1px solid rgba(0,0,0,0.3);
+    width: 100%;
+    display: block;
+    margin-bottom: 15px;
+}
+.login form >span{
+    font-size: 12px;
+    color: crimson;
+    justify-self:self-start;
+    align-self: flex-start;
+    position: relative;
+    top: -15px;
+}
+.login form input:focus{
+    border: 1px solid rgba(0,0,0,0.5);
+}
+.login form button{
+    display: block;
+    width: 100%;
+    padding: 6px 0;
+    background-color: #0095F6;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+}
+.or{
+    margin-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 13px;
+    color: rgb(126, 126, 126);
+}
+.or > .bar{
+ width: 40%;
+ background-color: #e2e2e2;
+ height: 1px;
+}
+.login > .forgot-password{
+    margin-bottom: 20px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.signup-here{
+    margin-top: 20px;
+    padding: 20px 0;
+    font-size: 14px;
+}
+.signup-here span{
+    cursor: pointer;
+    color: #0095f6;
+}
+.footer{
+    margin-top: 50px;
+    position: relative;
+    bottom: -50px;
+}
+@media(max-width:450px){
+    .login-container{
+        width: 100%;
+    }
+    .login-container >div:first-child,.login-container>p{
+    background-color: #FAFAFA;
+    border: none;
+    border-radius: 2px;
+}
+}
+.for-wrong-email-pass{
+    width: 80%;
+    margin-bottom: 20px;
+    font-size: 14px;
+    color: red;
+    font-family: inherit;
+}
