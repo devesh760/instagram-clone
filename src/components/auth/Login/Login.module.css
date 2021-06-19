@@ -1,8 +1,10 @@
-.login-container{
+.loginContainer{
     width: 350px;
-    margin: auto;    
+    margin: auto; 
+    position: relative;
+    top: 50px;   
 }
-.login-container >div:first-child,.login-container>p{
+.loginContainer >div:first-child,.loginContainer>p{
     background-color: #FFFFFF;
     border: 1px solid rgba(0,0,0,0.15);
     border-radius: 2px;
@@ -15,7 +17,7 @@
 .login > .logo{
     margin-top: 10px;
 }
-.login > .log-with-fb{
+/* .login > .logWithFb{
     cursor: pointer;
     font: 14px;
     font-weight: bold;
@@ -24,9 +26,9 @@
     display: flex;
     align-items: center;
 }
-.login > .log-with-fb i{
+.login > .logWithFb i{
     margin-right: 4px;
-}
+} */
 .login form , .login > .or{
     width: 80%;
 }
@@ -42,7 +44,7 @@
     border: 1px solid rgba(0,0,0,0.3);
     width: 100%;
     display: block;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 .login form >span{
     font-size: 12px;
@@ -80,17 +82,17 @@
  background-color: #e2e2e2;
  height: 1px;
 }
-.login > .forgot-password{
+.login > .forgotPassword{
     margin-bottom: 20px;
     font-size: 12px;
     cursor: pointer;
 }
-.signup-here{
+.signupHere{
     margin-top: 20px;
     padding: 20px 0;
     font-size: 14px;
 }
-.signup-here span{
+.signupHere span{
     cursor: pointer;
     color: #0095f6;
 }
@@ -100,16 +102,16 @@
     bottom: -50px;
 }
 @media(max-width:450px){
-    .login-container{
+    .loginContainer{
         width: 100%;
     }
-    .login-container >div:first-child,.login-container>p{
+    .loginContainer >div:first-child,.loginContainer>p{
     background-color: #FAFAFA;
     border: none;
     border-radius: 2px;
 }
 }
-.for-wrong-email-pass{
+.forWrongEmailPass{
     width: 80%;
     margin-bottom: 20px;
     font-size: 14px;

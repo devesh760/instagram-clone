@@ -1,0 +1,102 @@
+.container{
+    min-height: 100vh;
+    width: 100%;
+}
+.navContainer{
+    position: sticky;
+    top: 0;
+}
+.editMain{
+    width: 70%;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 20px;
+    margin-top: 70px;
+    background-color: #FFF;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 3px;
+    padding-left: 50px;
+    padding: 20px 50px;
+}
+.editMain .photoUpload  {
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.editMain .photoUpload  > aside{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: 20px;
+}
+.editMain .photoUpload  > aside > label{
+    border: none;
+    color: #0095F6;
+    border: none;
+    background-color: transparent;
+    font-size: 16px;
+    cursor: pointer;
+}
+.editMain .photoUpload  > aside > input{
+    display: none;
+}
+.editMain .photoUpload > img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    display: block;
+}
+.editMain > form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    width: fit-content;
+}
+.editMain > form  >div{
+    margin: 20px 0;
+   display: flex;
+   align-items: center;
+   
+}
+.editMain > form  >div > label{
+    margin-right: 50px;
+    font-size: 18px;
+    color: #000000;
+}
+.editMain > form  >div > input , textarea {
+    padding: 0 10px;
+    width: 300px;
+    height: 30px;
+}
+.editMain > form > button{
+ align-self: center;
+ padding: 5px 20px;
+background-color: #0095F6;
+color: #fff;
+border: none;
+border-radius: 5px;
+font-size: 17px;
+cursor: pointer;
+}
+textarea{
+    padding: 0;
+    height: auto;
+    overflow-y: scroll;
+    font-size: 16px;
+}
+.editMain > form > div > input:focus , textarea:focus{
+    border: 2px solid #000;
+    border-radius: 2px;
+}
+@media(max-width:700px) {
+    .editMain{
+        width: 100%;
+    }
+}

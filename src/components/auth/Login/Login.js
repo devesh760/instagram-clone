@@ -1,8 +1,9 @@
 import React,{Component} from "react";
 import Logo from "../../UI/Logo";
 import fire,{firebase} from '../../../firebase/fire';
-import "./Login.css";
-import {Link} from 'react-router-dom'
+import classes from "./Login.module.css";
+import {Link} from 'react-router-dom';
+import LoginWithFb from './LoginWithFb/LoginWithFb';
 
 
 class Login extends Component{
@@ -58,9 +59,9 @@ class Login extends Component{
   render(){
 
     return (
-      <div className="login-container">
-        <div className="login">
-          <div className="logo">
+      <div className={classes.loginContainer}>
+        <div className={classes.login}>
+          <div className={classes.logo}>
             <Logo height="90px" width="175px" />
           </div>
           <form action="">
@@ -82,26 +83,33 @@ class Login extends Component{
             ) : null}
             <button onClick={this.login_btn_handler}>Log In</button>
           </form>
-          <div className="or">
-            <div className="bar"></div>
+          <div className={classes.or}>
+            <div className={classes.bar}></div>
             <div>OR</div>
-            <div className="bar"></div>
+            <div className={classes.bar}></div>
           </div>
-          <div onClick={this.facebook_login_handler} className="log-with-fb">
+          {/* <div
+            onClick={this.facebook_login_handler}
+            className={classes.logWithFb}
+          >
             <i className="fab fa-facebook-square"></i>
             <p>Log in with Facebook</p>
-          </div>
+          </div> */}
+          <LoginWithFb />
           {this.state.loginErrMessage ? (
-            <p className="for-wrong-email-pass">
+            <p className={classes.forWrongEmailPass}>
               You have entered an invalid username or password
             </p>
           ) : null}
-          <p className="forgot-password">forgot-password?</p>
+          <p className={classes.forgotPassword}>forgot-password?</p>
         </div>
-        <p className="signup-here">
-          Don't have an account? <Link to='/signup'><span>Sign up</span></Link>
+        <p className={classes.signupHere}>
+          Don't have an account?{" "}
+          <Link style={{color:'#0095F6'}} to="/signup">
+            <span>Sign up</span>
+          </Link>
         </p>
-        <div className="footer">&#169; Instagram from Devesh</div>
+        <div className={classes.footer}>&#169; Instagram from Devesh</div>
       </div>
     );
   }

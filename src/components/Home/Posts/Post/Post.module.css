@@ -1,0 +1,107 @@
+.Post{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid rgba(0,0,0,0.2);
+    background-color: #FFFFFF;
+    border-radius: 2px;
+    margin-bottom: 20px;
+}
+.Post >header{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(0,0,0,0.2);
+
+}
+.Post >header aside:nth-of-type(1){
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color:#262626;
+    
+}
+.Post >header aside:nth-of-type(1) div{
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+    background-color: #FAFAFA;
+    margin-right:5px ;
+}
+.Post >header aside:nth-of-type(2){
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 32px;
+    padding: 10px;
+}
+.Post >header img{
+    width: 32px;
+    height: 32px;
+    border-radius: 32px;
+    margin-right: 10px;
+}
+.Post > .ImgCont{
+    width: 100%;
+}
+.Post > .ImgCont >img{
+    max-width: 100%;
+    height: auto;
+}
+.Post footer .comment{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 20px;
+    border-top: 1px solid rgba(0,0,0,0.2);
+}
+.Post footer .comment input{
+    width: 80%;
+    margin: 15px 0;
+    margin-left: 10px;
+    border: none;
+    /* border-bottom: 1px solid rgba(0,0,0,0.3); */
+    font-size: 15px;
+}
+.Post footer section{
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+}
+.Post footer section .displayComment{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-height: 200px;
+    overflow: scroll;
+}
+.Post footer section .displayComment::-webkit-scrollbar{
+    display: none;
+}
+.Post footer section .displayComment div h5{
+    display: inline;
+}
+.Post footer section .displayComment div{
+    margin-bottom: 3px;
+}
+.Post footer section .caption{
+    margin-bottom: 20px;
+}
+.Post footer section .caption h5{
+    display: inline;
+
+}
+.Post footer .comment button{
+    border: none;
+    background-color: transparent;
+    font-size: 1.2rem;
+    color: #0095f6;
+    cursor: pointer;
+
+}
+@media (max-width:1000px){
+    .Post >header aside:nth-of-type(1){
+        padding: 10px;
+    }
+}

@@ -1,0 +1,13 @@
+.logWithFb{
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    color: #385185;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.logWithFb i{
+     margin-right: 4px;
+}

@@ -1,11 +1,15 @@
+import React,{ Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Home from './components/Home/home';
 import Login from './components/auth/Login/Login'
 import Signup from './components/auth/signup/signup'
+import User from './components/users/user'
 import fire from './firebase/fire'
-import { Component } from 'react';
-import {Route,Switch} from 'react-router-dom';
+import Profile from './components/userProfile/Profile'
+import EditProfile from './components/userProfile/EditProfile/EditProfile'
+import {withRouter,Route,Router,Switch,useHistory} from 'react-router-dom';
+
 
 class App extends Component {
   state={
@@ -23,13 +27,19 @@ class App extends Component {
   render(){
     let toRender;
     if(this.state.userExist){
-      toRender = <Route exact path='/' component ={Home}/>
+      toRender = (
+      <>
+      <Route exact path='/' component ={Home}/>
+      <Route  path='/users/:id' component ={User}/>
+      <Route path='/profile' component={Profile}/>
+      <Route path='/Edit-profile' component={EditProfile}/>
+      </>);
     }
     else{
       toRender = (
         <>
-          <Route exact path="/" component={Login} />
-          <Route exact path="/signup" component={Signup} />
+          <Route path="/" exact component={Login} />
+          <Route path="/signup" exact component={Signup} />
         </>
       );
     }
@@ -41,4 +51,4 @@ class App extends Component {
   }
   
 }
-export default App;
+export default withRouter(App);

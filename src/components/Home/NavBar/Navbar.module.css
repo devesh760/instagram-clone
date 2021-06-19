@@ -1,0 +1,49 @@
+.Homenav{
+    height: 50px;
+    background-color: #fff;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    width: 100vw;
+    position: fixed;
+    top: 0;
+}
+.Homenav .container{   
+    padding: 0 20px; 
+    height: 55px;
+    margin: auto;
+    width: 75%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Homenav .container .NavItem{
+    width: 222px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 24px;
+}
+.YourAccount{
+    height: 30px;
+    width: 30px;
+    background-color: #FAFAFA;
+    border-radius: 100%;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -4px;
+}
+.YourAccount img{
+    height: 25px;
+    width: 25px;
+    border-radius: 100%;
+    cursor: pointer;
+}
+@media(max-width:1000px){
+    .Homenav .container{
+        width: 100%;
+    }
+    .Homenav .container .NavItem{
+        width: 200px;
+    }
+}
