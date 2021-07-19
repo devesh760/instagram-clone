@@ -33,7 +33,10 @@ function Profile() {
     let posts = null;
     if(userData.posts)
       posts = Object.values(userData.posts).map((post) => {
-        return <img key={JSON.stringify(post)} src={post.fileurl} />;
+          return <div key={JSON.stringify(post)}>
+            <img src={post.fileurl} />
+            <span>Delete This Post</span>
+          </div>;
       });
     TOSHOW = (
       <div className={classes.container}>
@@ -71,11 +74,7 @@ function Profile() {
               <p className={classes.Bio}>
                 {userData.bio
                   ? userData.bio
-                  : `𝕾𝖙𝖚𝖉𝖊𝖓𝖙 📓 🖋️ | 𝕷𝖊𝖆𝖗𝖓𝖊𝖗 🔰 | 𝕻𝖍𝖎𝖑𝖔𝖘𝖔𝖕𝖍𝖊𝖗 ☀️ 🌚
-                  𝕭𝖎𝖗𝖙𝖍𝖉𝖆𝖞 : 𝕾𝖊𝖕𝖙𝖊𝖒𝖇𝖊𝖗 07🎂🎂
-                  𝕽𝖊𝖑𝖎𝖌𝖎𝖔𝖓 : 𝕳𝖚𝖒𝖆𝖓𝖎𝖙𝖞 🙏 🙏
-                  𝖅𝖔𝖉𝖎𝖆𝖈 𝖘𝖎𝖌𝖓 : 𝕾𝖆𝖌𝖌𝖎𝖙𝖆𝖗𝖎𝖚𝖘 ♐
-                  🅻🅰🅷🅰🆁 | 🅶🆆🅰🅻🅸🅾🆁 | 🅺🅾🆃🅰`}
+                  : `Bio not updated`}
               </p>
             </aside>
           </header>

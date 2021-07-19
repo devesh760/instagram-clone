@@ -83,7 +83,7 @@
     display: inline;
 }
 .Post footer section .displayComment div{
-    margin-bottom: 3px;
+    margin: 3px 0;
 }
 .Post footer section .caption{
     margin-bottom: 20px;

@@ -48,7 +48,6 @@ class CreatePost extends Component {
         async () => {
           let url = await storage.ref.getDownloadURL();
           let userId = JSON.parse(localStorage.getItem("userData")).uid;
-          console.log("userId " + userId);
           let db = new fireDb("users/" + userId);
           db.pushPost({
             fileType: this.state.latestUploadType,
@@ -65,7 +64,6 @@ class CreatePost extends Component {
               caption: "",
             });
           });
-          console.log(url);
         }
       );
     });
@@ -124,29 +122,6 @@ class CreatePost extends Component {
               name="photo"
             />
           </div>
-          {/* <div className={classes.Wrapper}>
-            <label htmlFor="VideoInput">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                data-supported-dps="24x24"
-                fill="#8a3ab9"
-                width="24"
-                height="24"
-                focusable="false"
-              >
-                <path d="M19 4H5a3 3 0 00-3 3v10a3 3 0 003 3h14a3 3 0 003-3V7a3 3 0 00-3-3zm-9 12V8l6 4z"></path>
-              </svg>
-              <span>Video</span>
-            </label>
-            <input
-              onChange={this.change_handler}
-              type="file"
-              id="VideoInput"
-              name="video"
-            />
-            {this.state.showModel ? <Backdrop opacity="0.2" /> : null}
-          </div> */}
         </div>
         {ModelToshow}
       </div>

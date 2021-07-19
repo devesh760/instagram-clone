@@ -100,11 +100,29 @@ section{
     flex-wrap: wrap;
     width: 100%;
 }
-section img {
+section div img {
     width: 300px;
     height: 300px;
     border-radius: 2px;
+    margin: 0;
+}
+section div{
+    position: relative;
+    width: fit-content;
+    height: fit-content;
     margin:  20px;
+}
+section div span{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    color: #FAFAFA;
+    font-size: 1.2rem;
+    display: none;
+}
+section div:hover span{
+    display: block;
 }
 @media (max-width: 1000px){
     main{

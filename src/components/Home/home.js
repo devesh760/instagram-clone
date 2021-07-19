@@ -20,7 +20,6 @@ class Home extends Component{
                 <Posts />
               </aside>
               <aside>
-                
               </aside>
             </div>
           </div>

@@ -25,11 +25,10 @@ class YourAccount extends Component {
           <div onClick={this.showOptions} className={classes.Account}>
             <span></span>
             <ul className={classes.Options}>
-              <Link to='/profile'>
+              <Link style={{textDecoration:'none'}} to='/profile'>
                 <li>
                   <svg
                     aria-label="Profile"
-                    class="_8-yf5 "
                     fill="#262626"
                     height="16"
                     viewBox="0 0 32 32"
@@ -43,7 +42,6 @@ class YourAccount extends Component {
               <li>
                 <svg
                   aria-label="Saved"
-                  class="_8-yf5 "
                   fill="#262626"
                   height="16"
                   viewBox="0 0 32 32"
@@ -56,7 +54,6 @@ class YourAccount extends Component {
               <li>
                 <svg
                   aria-label="Settings"
-                  class="_8-yf5 "
                   fill="#262626"
                   height="16"
                   viewBox="0 0 32 32"
@@ -69,7 +66,6 @@ class YourAccount extends Component {
               <li>
                 <svg
                   aria-label="Switch Accounts"
-                  class="_8-yf5 "
                   fill="#262626"
                   height="16"
                   viewBox="0 0 32 32"

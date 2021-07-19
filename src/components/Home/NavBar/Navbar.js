@@ -9,21 +9,18 @@ import {Link} from 'react-router-dom'
 import Avatar from '../../UI/avatar/avatar' 
 import {fireDb} from '../../../firebase/firebase'
 class Navbar extends Component {
-    constructor(props) {
-        super(props);
-        this.state = { 
+    state = { 
           showBackdrop:false,
           showYourAccount:false,
           photoURL:''
-        }
-    }
+      }
     componentDidMount(){
       let uid = JSON.parse(localStorage.getItem('userData')).uid;
       this.setUserProfile(uid)
     }
     setUserProfile = (uid)=> {
       fireDb.getDataById(uid).then(data=>{
-        if(data.photoURL)
+        if(data && data.photoURL)
           this.setState({photoURL:data.photoURL})
       })
     }
@@ -97,7 +94,7 @@ class Navbar extends Component {
                     onClick={this.yourAccount_handler}
                     className={classes.YourAccount}
                   >
-                    {this.state.photoURL!==''?<img src={MyLogo} alt="" />:<Avatar style={{border:'1px solid rgba(0,0,0,0.3)'}}/>}
+                    {this.state.photoURL!==''?<img src={this.state.photoURL} alt="" />:<Avatar style={{border:'1px solid rgba(0,0,0,0.3)'}}/>}
                     {this.state.showYourAccount ? (
                       <YourAccount signOut={this.props.signOut} />
                     ) : null}

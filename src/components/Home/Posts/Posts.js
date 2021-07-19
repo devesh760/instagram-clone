@@ -28,7 +28,6 @@ function Posts (props) {
         useEffect(() => {
           let ans = fireDb.getTwentyPosts();
           ans.then((data1) => {
-              console.log(data1)
             setData(data1);
           });
         },[]);

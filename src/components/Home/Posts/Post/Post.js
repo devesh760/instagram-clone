@@ -16,11 +16,17 @@ function Post({profile_pic,username,image,caption,id,idx,comments}) {
       fireDb.addComment(id,idx,myusername,comment).then(d=>d).then(ans=>{
         console.log(ans)
       })
-      let [...comments] = allComments;
       let obj = {};
       obj[myusername] = comment;
-      comments.push({...obj});
-      setAllcomments(comments);
+      if(allComments){
+        let [...comments] = allComments;
+        comments.push({...obj});
+        setAllcomments(comments);
+      }
+      else{
+         let arr = new Array(obj);
+         setAllcomments(arr);
+      }
       inputref.current.value = ''
    }
       let comments_to_show = null;

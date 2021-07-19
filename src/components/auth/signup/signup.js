@@ -17,12 +17,10 @@ class SignUp extends Component {
   };
   signUp_handler = (e) => {
     e.preventDefault();
-    console.log(this.state);
     fire
       .auth()
       .createUserWithEmailAndPassword(this.state.Email, this.state.Password)
       .then((userData) => {
-        console.log(userData.user.providerData);
         this.setUserDataOnDb(
           this.state.Email,
           this.state.Fullname,
@@ -51,7 +49,6 @@ class SignUp extends Component {
       .limitToLast(1)
       .get()
       .then((last_user_data) => {
-        console.log(last_user_data.val());
         if (last_user_data.val() == null) {
           data.uid = 0;
         } else {
@@ -85,7 +82,7 @@ class SignUp extends Component {
           </div>
           <p>Sign up to see photos and videos from your friends.</p>
           <div className={classes.fbBtn}>
-            <LoginWithFb color="#FFFFFF" />
+            <LoginWithFb color="#FFFFFF" signup={true}/>
           </div>
           <div className={classes.or}>
             <div className={classes.bar}></div>
